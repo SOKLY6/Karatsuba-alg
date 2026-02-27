@@ -1,8 +1,7 @@
 build:
-	pip install uv
+	curl -LsSf https://astral.sh/uv/install.sh | sh
 	uv venv
-	source .venv/bin/activate
-	uv sync
+	. .venv/bin/activate && uv sync
 
 test:
 	python3 test.py > report.txt
